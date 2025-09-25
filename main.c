@@ -3,14 +3,21 @@
 
 int main(int argc, char *argv[])
 {
-  int year;
-  int yesorno;
+  unsigned int x;
+  int b; 
   
-  printf("Input year : ");
-  scanf("%i", &year);
+  printf("Input a number : ");
+  scanf("%ui", &x);
   
-  yesorno = ((year%4 == 0) && (year%100 != 0)) || (year%400 == 0);
-  printf("Is the year %i is leaf year? %i\n", year, yesorno);
+  for (b=0; x!=0; x>>=1)
+  {
+      if (x & 1)
+      {
+            b++;
+      }
+  }
+  
+  printf("The result is : %i\n", b);
   
   system("PAUSE");	
   return 0;
