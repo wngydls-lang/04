@@ -3,17 +3,14 @@
 
 int main(int argc, char *argv[])
 {
-  int x;
-  int min;
-  int sec;
+  int year;
+  int yesorno;
   
-  printf("Input the second : ");
-  scanf("%i", &x);
+  printf("Input year : ");
+  scanf("%i", &year);
   
-  min = x/60;
-  sec = x%60;
-  
-  printf("The time is %i : %i\n", min, sec);
+  yesorno = ((year%4 == 0) && (year%100 != 0)) || (year%400 == 0);
+  printf("Is the year %i is leaf year? %i\n", year, yesorno);
   
   system("PAUSE");	
   return 0;
